@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -7,127 +7,255 @@
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./scripts/set-theme.js"></script>
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/vendor/fonts.css">
+    <link rel="stylesheet" href="/vendor/normalize.css">
   </head>
   <body>
-    <nav class="nav">
-      <p class="nav-logo">Логотип</p>
-      <button class="nav-catalog">Каталог</button>
-      <div class="search-wrapper">
-        <label for="search" class="search"></label>
-        <input
-          type="text"
-          name="search"
-          id="search"
-          class="nav-search"
-          placeholder="Название, симптом, система организма или активное решение"
-        />
-      </div>
-      <div class="nav-info">
-        <button type="button" class="nav-info-btn">
-          Информация о компании
-        </button>
-        <button type="button" class="nav-info-btn">Контакты</button>
-        <button type="button" class="nav-info-btn">Полезные ссылки</button>
-      </div>
-    </nav>
-    <main class="main">
-      <section class="category">
-        <article class="category-change">
-          <button type="button" class="category-change-names">
-            Название категории
+    <div class="page">
+      <nav class="nav">
+        <p class="nav-logo">
+          <span class="nav-logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M5 21C4.45 21 3.979 20.8043 3.587 20.413C3.19567 20.021 3 19.55 3 19V5C3 4.45 3.19567 3.979 3.587 3.587C3.979 3.19567 4.45 3 5 3H19C19.55 3 20.021 3.19567 20.413 3.587C20.8043 3.979 21 4.45 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.021 20.8043 19.55 21 19 21H5ZM6 17H18L14.25 12L11.25 16L9 13L6 17Z" fill="#73AFF4"/>
+              </svg>
+          </span>
+          Логотип</p>
+        <button class="nav-catalog">Каталог</button>
+        <div class="search-wrapper">
+          <label for="search" class="search"></label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="nav-search"
+            placeholder="Название, симптом, система организма или активное решение"
+          />
+        </div>
+        <div class="nav-info">
+          <button type="button" class="nav-info-btn">
+            Информация о компании
           </button>
-          <div class="category-change-name-wrapper">
-            <button class="category-change-name">Название категории</button>
-            <button class="category-change-name">Название категории</button>
-            <button class="category-change-name">Название категории</button>
-          </div>
-          <article class="category-change-price-wrapper">
-            <h3 class="category-change-price-title">Цена</h3>
-            <div class="category-change-price-form">
-              <input
-                type="number"
-                name="search-price"
-                id=""
-                class="category-change-price-select"
-                placeholder="от"
-              />
-              <input
-                type="number"
-                name="search-price"
-                id=""
-                class="category-change-price-select"
-                placeholder="от"
-              />
+          <button type="button" class="nav-info-btn">Контакты</button>
+          <button type="button" class="nav-info-btn">Полезные ссылки</button>
+        </div>
+      </nav>
+      <main class="main">
+        <section class="category">
+          <article class="category-change">
+            <button type="button" class="category-change-names category-button-decor">
+              Название категории
+              <span class="categoru-change-name-quantity">3</span>
+            </button>
+            <div class="category-change-name-wrapper">
+              <button type="button" class="category-change-name category-button-decor">Название категории <span class="categoru-change-name-quantity">3</span></button>
+              <button type="button" class="category-change-name category-button-decor">Название категории <span class="categoru-change-name-quantity">3</span></button>
+              <button disabled type="button" class="category-change-name category-button-decor">Название категории </button>
+            </div>
+            <article class="category-change-price-wrapper">
+              <h3 class="category-change-price-title">Цена</h3>
+              <div class="category-change-price-form">
+                <input
+                  type="number"
+                  name="search-price"
+                  id=""
+                  class="category-change-price-select"
+                  placeholder="от 5500"
+                />
+                <span class="category-change-price-line"></span>
+                <input
+                  type="number"
+                  name="search-price"
+                  id=""
+                  class="category-change-price-select"
+                  placeholder="до 5500"
+                />
+              </div>
+            </article>
+          </article>
+          <article class="category-select">
+            <div class="category-select-title-wrapper">
+              <h3 class="category-select-title">Бренд</h3>
+              <button type="button" class="category-select-button_remove">
+                Очистить
+              </button>
+            </div>
+              <input placeholder="Поиск" type="text" name="" id="" class="category-select-input" />
+              <div class="category-select-names">
+                <div class="category-select-names-wrapper">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="category-select-chek"
+                  />
+                  <label for="" class="category-select-name">Атрибут 
+                    <span class="categoru-change-name-quantity">3</span>
+                  </label>
+                </div>
+                <div class="category-select-names-wrapper">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="category-select-chek"
+                  />
+                  <label for="" class="category-select-name">Атрибут 
+                    <span class="categoru-change-name-quantity">3</span>
+                  </label>
+                </div>
+                <div class="category-select-names-wrapper">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="category-select-chek"
+                  />
+                  <label for="" class="category-select-name">Атрибут 
+                    <span class="categoru-change-name-quantity">3</span>
+                  </label>
+                </div>
+                <div class="category-select-names-wrapper">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="category-select-chek"
+                  />
+                  <label for="" class="category-select-name">Атрибут 
+                    <span class="categoru-change-name-quantity">3</span>
+                  </label>
+                </div>
+                <div class="category-select-names-wrapper">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="category-select-chek"
+                  />
+                  <label for="" class="category-select-name">Атрибут 
+                    <span class="categoru-change-name-quantity">3</span>
+                  </label>
+                </div>
+                <div class="category-select-names-wrapper">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="category-select-chek"
+                  />
+                  <label for="" class="category-select-name">Атрибут 
+                    <span class="categoru-change-name-quantity">3</span>
+                  </label>
+                </div>
+                </div>
+          
+          </article>
+          <article class="category-select">
+            <h3 class="category-select-title">Размер</h3>
+            <div class="category-select-change">
+              <div class="category-select-names-wrapper">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="category-select-chek"
+                />
+                <label for="" class="category-select-name">Атрибут 
+                  <span class="categoru-change-name-quantity">3</span>
+                </label>
+              </div>                
+              <div class="category-select-names-wrapper">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="category-select-chek"
+                />
+                <label for="" class="category-select-name">Атрибут 
+                  <span class="categoru-change-name-quantity">3</span>
+                </label>
+              </div>
+              <div class="category-select-names-wrapper">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="category-select-chek"
+                />
+                <label for="" class="category-select-name">Атрибут 
+                  <span class="categoru-change-name-quantity">3</span>
+                </label>
+              </div>
+              <div class="category-select-names-wrapper">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="category-select-chek"
+                />
+                <label for="" class="category-select-name">Атрибут 
+                  <span class="categoru-change-name-quantity">3</span>
+                </label>
+              </div>
+              <div class="category-select-names-wrapper">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="category-select-chek"
+                />
+                <label for="" class="category-select-name">Атрибут 
+                  <span class="categoru-change-name-quantity">3</span>
+                </label>
+              </div>
+              <div class="category-select-names-wrapper">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="category-select-chek"
+                />
+                <label for="" class="category-select-name">Атрибут 
+                  <span class="categoru-change-name-quantity">3</span>
+                </label>
+              </div>
             </div>
           </article>
-        </article>
-        <article class="category-brand">
-          <div class="category-brand-title-wrapper">
-            <h3 class="category-brand-title">Бренд</h3>
-            <button type="button" class="category-brand-button_remove">
-              Очистить
-            </button>
+        </section>
+        <section class="cards">
+          <ul class="cards-list"></ul>
+        </section>
+      </main>
+  
+      <script src="/cards.js"></script>
+      <script src="/index.js" defer></script>
+  
+  
+      <template id="card-template">
+        <li class="card__item">
+          <div class="img-wrapper">
+            <img src="" alt="" class="card-img">
+            <figure class="card-img-sale">
+              <span class="card-img-sale-text"></span>
+              <span class="card-img-sale-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M3.33337 11.6667C3.33337 10.2083 3.6806 8.90972 4.37504 7.77083C5.06949 6.63194 5.83337 5.67361 6.66671 4.89583C7.50004 4.11806 8.26393 3.52417 8.95837 3.11417L10 2.5V5.25C10 5.76389 10.1737 6.17 10.5209 6.46833C10.8681 6.76667 11.257 6.91611 11.6875 6.91667C11.9237 6.91667 12.1495 6.86806 12.365 6.77083C12.5806 6.67361 12.7784 6.51389 12.9584 6.29167L13.3334 5.83333C14.3334 6.41667 15.1389 7.22555 15.75 8.26C16.3612 9.29444 16.6667 10.43 16.6667 11.6667C16.6667 12.8889 16.3681 14.0036 15.7709 15.0108C15.1737 16.0181 14.3889 16.8128 13.4167 17.395C13.6528 17.0617 13.837 16.6969 13.9692 16.3008C14.1014 15.9047 14.1673 15.485 14.1667 15.0417C14.1667 14.4861 14.0625 13.9617 13.8542 13.4683C13.6459 12.975 13.3473 12.5342 12.9584 12.1458L10 9.25L7.06254 12.1458C6.65976 12.5486 6.35421 12.9931 6.14587 13.4792C5.93754 13.9653 5.83337 14.4861 5.83337 15.0417C5.83337 15.4861 5.89949 15.9064 6.03171 16.3025C6.16393 16.6986 6.34782 17.0631 6.58337 17.3958C5.61115 16.8125 4.82643 16.0172 4.22921 15.01C3.63199 14.0028 3.33337 12.8883 3.33337 11.6667ZM10 11.5833L11.7709 13.3125C12.007 13.5486 12.1875 13.8125 12.3125 14.1042C12.4375 14.3958 12.5 14.7083 12.5 15.0417C12.5 15.7222 12.257 16.3019 11.7709 16.7808C11.2848 17.2597 10.6945 17.4994 10 17.5C9.3056 17.5 8.71532 17.2603 8.22921 16.7808C7.7431 16.3014 7.50004 15.7217 7.50004 15.0417C7.50004 14.7222 7.56254 14.4131 7.68754 14.1142C7.81254 13.8153 7.9931 13.5481 8.22921 13.3125L10 11.5833Z" fill="#FF8743"/>
+                </svg>
+              </span>
+            </figure>
           </div>
-          <div class="category-brand-change">
-            <input type="text" name="" id="" class="category-brand-input" />
-            <div class="category-brand-names">
-              <div class="category-brand-names-wrapper">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  class="category-brand-chek"
-                />
-                <label for="" class="category-brand-name">Атрибут</label>
-              </div>
-              <div class="category-brand-names-wrapper">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  class="category-brand-chek"
-                /><label for="" class="category-brand-name">Атрибут</label>
-              </div>
-              <div class="category-brand-names-wrapper">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  class="category-brand-chek"
-                /><label for="" class="category-brand-name">Атрибут</label>
-              </div>
-              <div class="category-brand-names-wrapper">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  class="category-brand-chek"
-                /><label for="" class="category-brand-name">Атрибут</label>
-              </div>
-              <div class="category-brand-names-wrapper">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  class="category-brand-chek"
-                /><label for="" class="category-brand-name">Атрибут</label>
-              </div>
-              <div class="category-brand-names-wrapper">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  class="category-brand-chek"
-                /><label for="" class="category-brand-name">Атрибут</label>
-              </div>
-            </div>
+          <div class="card-info">
+            <h3 class="card-title"></h3>
+            <p class="card-text"></p>
           </div>
-        </article>
-      </section>
-    </main>
+          <p class="card-price">
+            <span class="card-price-no-sale"></span>
+          </p>
+          <button class="card-buy" type="button">Купить</button>
+        </li>
+      </template>
+    </div>
   </body>
 </html>
